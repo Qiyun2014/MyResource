@@ -20,14 +20,13 @@
 下图给出的是一个最基本的人工神经网络的 3 层模型。 
 
 前馈神经网络示意图 
-
-![image](/Users/qiyun/MyResource/1.png )
+![image](https://github.com/Qiyun2014/MyResource/blob/master/1.png )
 
 
 ###神经网络
 
 **前馈神经网络**
-![image](/Users/qiyun/MyResource/2.jpg
+![image](https://github.com/Qiyun2014/MyResource/blob/master/2.jpg
 )
 
 * 神经网络其实是一个非常宽泛的称呼，它包括两类，一类是用计算机的方式去模拟人脑，这就是我们常说的ANN（人工神经网络），另一类是研究生物学上的神经网络，又叫生物神经网络。对于我们计算机人士而言，肯定是研究前者。
@@ -52,14 +51,14 @@
 * 一个神经元通常具有多个树突，主要用来接受传入信息；而轴突只有一条，轴突尾端有许多轴突末梢可以给其他多个神经元传递信息。轴突末梢跟其他神经元的树突产生连接，从而传递信号。这个连接的位置在生物学上叫做“突触”。
 
 人脑中的神经元形状可以用下图做简单的说明：
-![image](/Users/qiyun/MyResource/3.png)
+![image](https://github.com/Qiyun2014/MyResource/blob/master/3.png)
 
 
 * 神经元模型是一个包含输入，输出与计算功能的模型。输入可以类比为神经元的树突，而输出可以类比为神经元的轴突，计算则可以类比为细胞核。
 * 下图是一个典型的神经元模型：包含有3个输入，1个输出，以及2个计算功能。
 * 注意中间的箭头线。这些线称为“连接”。每个上有一个“权值”。
 
-![image](/Users/qiyun/MyResource/4.png)
+![image](https://github.com/Qiyun2014/MyResource/blob/master/4.png)
 
 
 * 连接是神经元中最重要的东西。每一个连接上都有一个权重。
@@ -67,17 +66,17 @@
 * 我们使用a来表示输入，用w来表示权值。一个表示连接的有向箭头可以这样理解：在初端，传递的信号大小仍然是a，端中间有加权参数w，经过这个加权后的信号会变成a*w，因此在连接的末端，信号的大小就变成了a*w。
 * 在其他绘图模型里，有向箭头可能表示的是值的不变传递。而在神经元模型里，每个有向箭头表示的是值的加权传递。
 
-![image](/Users/qiyun/MyResource/5.png)
+![image](https://github.com/Qiyun2014/MyResource/blob/master/5.png)
 
 * 如果我们将神经元图中的所有变量用符号表示，并且写出输出的计算公式的话，就是下图。
 
-![image](/Users/qiyun/MyResource/6.png)
+![image](https://github.com/Qiyun2014/MyResource/blob/master/6.png)
 
 * 可见z是在输入和权值的线性加权和叠加了一个函数g的值。在MP模型里，函数g是sgn函数，也就是取符号函数。这个函数当输入大于0时，输出1，否则输出0。
 * 下面对神经元模型的图进行一些扩展。首先将sum函数与sgn函数合并到一个圆圈里，代表神经元的内部计算。其次，把输入a与输出z写到连接线的左上方，便于后面画复杂的网络。最后说明，一个神经元可以引出多个代表输出的有向箭头，但值都是一样的。
 * 神经元可以看作一个计算与存储单元。计算是神经元对其的输入进行计算功能。存储是神经元会暂存计算结果，并传递到下一层
 
-![image](/Users/qiyun/MyResource/7.png)
+![image](https://github.com/Qiyun2014/MyResource/blob/master/7.png)
 
 * 当我们用“神经元”组成网络以后，描述网络中的某个“神经元”时，我们更多地会用“单元”（unit）来指代。同时由于神经网络的表现形式是一个有向图，有时也会用“节点”（node）来表达同样的意思。 
 
@@ -96,11 +95,11 @@
 
 **例如ax(y)代表第y层的第x个节点。z1，z2变成了a1(2)，a2(2)。下图给出了a1(2)，a2(2)的计算公式。**
 
-![netural](/Users/qiyun/MyResource/8.png)
+![netural](https://github.com/Qiyun2014/MyResource/blob/master/8.png)
 
 **计算最终输出z的方式是利用了中间层的a1(2)，a2(2)和第二个权值矩阵计算得到的，如下图。**
 
-![netural](/Users/qiyun/MyResource/9.png)
+![netural](https://github.com/Qiyun2014/MyResource/blob/master/9.png)
 
 **与单层神经网络不同。理论证明，两层神经网络可以无限逼近任意连续函数。**
 **这是什么意思呢？也就是说，面对复杂的非线性分类任务，两层（带一个隐藏层）神经网络可以分类的很好**
@@ -110,7 +109,7 @@
 
 如EasyPR字符识别网络架构（下图）。
 
-![EasyPR](/Users/qiyun/MyResource/10.png)
+![EasyPR](https://github.com/Qiyun2014/MyResource/blob/master/10.png)
 
 EasyPR使用了字符的图像去进行字符文字的识别。输入是120维的向量。输出是要预测的文字类别，共有65类。根据实验，我们测试了一些隐藏层数目，发现当值为40时，整个网络在测试集上的效果较好，因此选择网络的最终结构就是120，40，65。
 
