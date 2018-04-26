@@ -137,7 +137,7 @@ loss = (yp - y)2
 ####反向传播算法
 ==反向传播算法可以直观的理解为下图。梯度的计算从后往前，一层层反向传播。前缀E代表着相对导数的意思。==
 
-![Forward](/Users/qiyun/MyResource/11.png)
+![Forward](https://github.com/Qiyun2014/MyResource/blob/master/11.png)
 
 **反向传播算法的启示是数学中的链式法则。在此需要说明的是，尽管早期神经网络的研究人员努力从生物学中得到启发，但从BP算法开始，研究者们更多地从数学上寻求问题的最优解。不再盲目模拟人脑网络是神经网络研究走向成熟的标志。正如科学家们可以从鸟类的飞行中得到启发，但没有必要一定要完全模拟鸟类的飞行方式，也能制造可以飞天的飞机。**
 
@@ -161,7 +161,7 @@ loss = (yp - y)2
 	
 在两层神经网络的输出层后面，继续添加层次。原来的输出层变成中间层，新加的层次成为新的输出层。所以可以得到下图。
 
-![DeepNerveNet](/Users/qiyun/MyResource/12.png)
+![DeepNerveNet](https://github.com/Qiyun2014/MyResource/blob/master/12.png)
 
 依照这样的方式不断添加，我们可以得到更多层的多层神经网络。公式推导的话其实跟两层神经网络类似，使用矩阵运算的话就仅仅是加一个公式而已。
 ==在已知输入a(1)，参数W(1)，W(2)，W(3)的情况下，输出z的推导公式如下：==
@@ -175,16 +175,16 @@ loss = (yp - y)2
 
 ==首先看第一张图，可以看出W(1)中有6个参数，W(2)中有4个参数，W(3)中有6个参数，所以整个神经网络中的参数有16个（这里我们不考虑偏置节点，下同）。==
 
-![DeepNerveNet2](/Users/qiyun/MyResource/13.png)
+![DeepNerveNet2](https://github.com/Qiyun2014/MyResource/blob/master/13.png)
 
 ==假设我们将中间层的节点数做一下调整。第一个中间层改为3个单元，第二个中间层改为4个单元。经过调整以后，整个网络的参数变成了33个。==
 
-![DeepNerveNet3](/Users/qiyun/MyResource/14.png)
+![DeepNerveNet3](https://github.com/Qiyun2014/MyResource/blob/master/14.png)
 
 ==虽然层数保持不变，但是第二个神经网络的参数数量却是第一个神经网络的接近两倍之多，从而带来了更好的表示（represention）能力。表示能力是多层神经网络的一个重要性质。
 在参数一致的情况下，我们也可以获得一个“更深”的网络==
 
-![DeepNerveNet4](/Users/qiyun/MyResource/15.png)
+![DeepNerveNet4](https://github.com/Qiyun2014/MyResource/blob/master/15.png)
 
 ==上图的网络中，虽然参数数量仍然是33，但却有4个中间层，是原来层数的接近两倍。这意味着一样的参数数量，可以用更深的层次去表达。==
 
@@ -194,7 +194,7 @@ loss = (yp - y)2
 
 **多层神经网络特征学习如图：**
 
-![DeepNerveNet5](/Users/qiyun/MyResource/16.png)
+![DeepNerveNet5](https://github.com/Qiyun2014/MyResource/blob/master/16.png)
 
 * 更强的函数模拟能力是由于随着层数的增加，整个网络的参数就越多。而神经网络其实本质就是模拟特征与目标之间的真实关系函数的方法，更多的参数意味着其模拟的函数可以更加的复杂，可以有更多的容量（capcity）去拟合真正的关系。
 * 通过研究发现，在参数数量一样的情况下，更深的网络往往具有比浅层的网络更好的识别效率。这点也在ImageNet的多次大赛中得到了证实。从2012年起，每年获得ImageNet冠军的深度神经网络的层数逐年增加，2015年最好的方法GoogleNet是一个多达22层的神经网络。
@@ -213,7 +213,7 @@ loss = (yp - y)2
 神经网络的发展历史曲折荡漾，既有被人捧上天的时刻，也有摔落在街头无人问津的时段，中间经历了数次大起大落。
 从单层神经网络（感知器）开始，到包含一个隐藏层的两层神经网络，再到多层的深度神经网络，一共有三次兴起过程。详见下图。
 
-![Introduce](/Users/qiyun/MyResource/17.png)
+![Introduce](https://github.com/Qiyun2014/MyResource/blob/master/17.png)
 
 * 上图中的顶点与谷底可以看作神经网络发展的高峰与低谷。图中的横轴是时间，以年为单位。纵轴是一个神经网络影响力的示意表示。如果把1949年Hebb模型提出到1958年的感知机诞生这个10年视为落下（没有兴起）的话，那么神经网络算是经历了“三起三落”这样一个过程，跟“小平”同志类似。俗话说，天将降大任于斯人也，必先苦其心志，劳其筋骨。经历过如此多波折的神经网络能够在现阶段取得成功也可以被看做是磨砺的积累吧。
 
@@ -225,14 +225,14 @@ loss = (yp - y)2
 ==下面说一下神经网络为什么能这么火热？简而言之，就是其学习效果的强大。随着神经网络的发展，其表示性能越来越强。==
 ==从单层神经网络，到两层神经网络，再到多层神经网络，下图说明了，随着网络层数的增加，以及激活函数的调整，神经网络所能拟合的决策分界平面的能力。==
 
-![Introduce2](/Users/qiyun/MyResource/18.jpg)
+![Introduce2](https://github.com/Qiyun2014/MyResource/blob/master/18.jpg)
 
 可以看出，随着层数增加，其非线性分界拟合能力不断增强。图中的分界线并不代表真实训练出的效果，更多的是示意效果。
 神经网络的研究与应用之所以能够不断地火热发展下去，与其强大的函数拟合能力是分不开关系的。
 
 当然，光有强大的内在能力，并不一定能成功。一个成功的技术与方法，不仅需要内因的作用，还需要时势与环境的配合。神经网络的发展背后的外在原因可以被总结为：更强的计算性能，更多的数据，以及更好的训练方法。只有满足这些条件时，神经网络的函数拟合能力才能得已体现，见下图。
 
-![Introduce3](/Users/qiyun/MyResource/19.jpg)
+![Introduce3](https://github.com/Qiyun2014/MyResource/blob/master/19.jpg)
 
 * 之所以在单层神经网络年代，Rosenblat无法制作一个双层分类器，就在于当时的计算性能不足，Minsky也以此来打压神经网络。但是Minsky没有料到，仅仅10年以后，计算机CPU的快速发展已经使得我们可以做两层神经网络的训练，并且还有快速的学习算法BP。
 
@@ -270,11 +270,11 @@ loss = (yp - y)2
 
 1. 苍蝇的视觉和人的视觉的差异
 
-![Vision](/Users/qiyun/MyResource/20.jpg)
+![Vision](https://github.com/Qiyun2014/MyResource/blob/master/20.jpg)
 
 2. 蛇的视觉和人的视觉的差异
 
-![Vision](/Users/qiyun/MyResource/21.jpg)
+![Vision](https://github.com/Qiyun2014/MyResource/blob/master/21.jpg)
 
 ```
 通过上面的两组对比图可以知道，即便是相同的图片经过不同的视觉系统，也会得到不同的感知。
@@ -284,7 +284,7 @@ loss = (yp - y)2
 
 任何视觉系统都是将图像反光与脑中所看到的概念进行关联。
 
-![Explain](/Users/qiyun/MyResource/22.jpg)
+![Explain](https://github.com/Qiyun2014/MyResource/blob/master/22.jpg)
 
 所以画面识别实际上并非识别这个东西客观上是什么，而是寻找人类的视觉关联方式，并再次应用。 如果我们不是人类，而是蛇类，那么画面识别所寻找的𝒇就和现在的不一样。
 
@@ -296,7 +296,7 @@ loss = (yp - y)2
 
 在自然界中，是物体的反光，那么在计算机中，图像又是如何被表达和存储的呢？
 
-![Repression](/Users/qiyun/MyResource/23.gif)
+![Repression](https://github.com/Qiyun2014/MyResource/blob/master/23.gif)
 
 图像在计算机中是一堆按顺序排列的数字，数值为0到255。0表示最暗，255表示最亮。 你可以把这堆数字用一个长长的向量来表示，也就是==tensorflow==的mnist教程中784维向量的表示方式。 然而这样会失去平面结构的信息，为保留该结构信息，通常选择矩阵的表示方式：28x28的矩阵。
 
@@ -305,7 +305,7 @@ loss = (yp - y)2
 
 在电脑中，一张图片是数字构成的“长方体”。可用 宽width, 高height, 深depth 来描述，如图。
 
-![RGBImage](/Users/qiyun/MyResource/24.jpg)
+![RGBImage](https://github.com/Qiyun2014/MyResource/blob/master/24.jpg)
 
 `画面识别的输入是shape为(width, height, depth)的三维张量。`
 
@@ -315,7 +315,7 @@ loss = (yp - y)2
 
 在决定如何处理“数字长方体”之前，需要清楚所建立的网络拥有什么样的特点。 我们知道一个物体不管在画面左侧还是右侧，都会被识别为同一物体，这一特点就是不变性（invariance），如下图所示。
 
-![ImageRotation](/Users/qiyun/MyResource/25.jpg)
+![ImageRotation](https://github.com/Qiyun2014/MyResource/blob/master/25.jpg)
 
 我们希望所建立的网络可以尽可能的满足这些不变性特点。
 为了理解卷积神经网络对这些不变性特点的贡献，我们将用不具备这些不变性特点的前馈神经网络来进行比较。
@@ -324,15 +324,15 @@ loss = (yp - y)2
 
 方便起见，我们用depth只有1的灰度图来举例。 想要完成的任务是：在宽长为4x4的图片中识别是否有下图所示的“横折”。 图中，黄色圆点表示值为0的像素，深色圆点表示值为1的像素。 我们知道不管这个横折在图片中的什么位置，都会被认为是相同的横折。
 
-![-w360](/Users/qiyun/MyResource/26.jpg)
+![-w360](https://github.com/Qiyun2014/MyResource/blob/master/26.jpg)
 
 若训练前馈神经网络来完成该任务，那么表达图像的三维张量将会被摊平成一个向量，作为网络的输入，即(width, height, depth)为(4, 4, 1)的图片会被展成维度为16的向量作为网络的输入层。再经过几层不同节点个数的隐藏层，最终输出两个节点，分别表示“有横折的概率”和“没有横折的概率”，如下图所示。
 
-![-w360](/Users/qiyun/MyResource/27.jpg)
+![-w360](https://github.com/Qiyun2014/MyResource/blob/master/27.jpg)
 
 下面我们用数字（16进制）对图片中的每一个像素点（pixel）进行编号。 当使用右侧那种物体位于中间的训练数据来训练网络时，网络就只会对编号为5,6,9,a的节点的权重进行调节。 若让该网络识别位于右下角的“横折”时，则无法识别。
 
-![Image](/Users/qiyun/MyResource/28.jpg)
+![Image](https://github.com/Qiyun2014/MyResource/blob/master/28.jpg)
 
 解决办法是用大量物体位于不同位置的数据训练，同时增加网络的隐藏层个数从而扩大网络学习这些变体的能力。
 然而这样做十分不效率，因为我们知道在左侧的“横折”也好，还是在右侧的“横折”也罢，大家都是“横折”。 为什么相同的东西在位置变了之后要重新学习？有没有什么方法可以将中间所学到的规律也运用在其他的位置？ 换句话说，也就是让==不同位置用相同的权重==。
@@ -345,7 +345,7 @@ loss = (yp - y)2
 
 * 为了更好的和前馈神经网络做比较，我将这些以矩阵排列的节点展成了向量。 下图展示了被红色方框所圈中编号为0,1,4,5的节点是如何通过连接到下一层的节点0上的。
 
-![Image](/Users/qiyun/MyResource/29.jpg)
+![Image](https://github.com/Qiyun2014/MyResource/blob/master/29.jpg)
 
 这个带有连接强弱的红色方框就叫做 filter 或 kernel 或 feature detector。 而filter的范围叫做filter size，这里所展示的是2x2的filter size。
  ![Image](/Users/qiyun/MyResource/30.png) 
@@ -353,7 +353,7 @@ loss = (yp - y)2
 
 注：在局部区域的线性组合后，也会和前馈神经网络一样，加上一个偏移量（偏移量充当阈值）。
 
-![Image](/Users/qiyun/MyResource/31.png)
+![Image](https://github.com/Qiyun2014/MyResource/blob/master/31.png)
 
 ####空间共享
 
@@ -363,7 +363,7 @@ loss = (yp - y)2
 
 图中显示的是一步一步的移动filter来扫描全图，一次移动多少叫做stride。
 
-![Image](/Users/qiyun/MyResource/32.gif)
+![Image](https://github.com/Qiyun2014/MyResource/blob/master/32.gif)
 
 `空间共享也就是卷积神经网络所引入的先验知识。`
 
@@ -371,11 +371,11 @@ loss = (yp - y)2
 
 如先前在图像表达中提到的，图片不用向量去表示是为了保留图片平面结构的信息。 同样的，卷积后的输出若用上图的排列方式则丢失了平面结构信息。 所以我们依然用矩阵的方式排列它们，就得到了下图所展示的连接。
 
-![Image](/Users/qiyun/MyResource/33.jpg)
+![Image](https://github.com/Qiyun2014/MyResource/blob/master/33.jpg)
 
 这也就是你们在网上所看到的下面这张图。在看这张图的时候请结合上图的连接一起理解，即输入（绿色）的每九个节点连接到输出（粉红色）的一个节点上的
 
-![Image](/Users/qiyun/MyResource/34.gif)
+![Image](https://github.com/Qiyun2014/MyResource/blob/master/34.gif)
 
 ==经过一个feature detector计算后得到的粉红色区域也叫做一个“Convolved Feature” 或 “Activation Map” 或 “Feature Map”。==
 
@@ -395,25 +395,25 @@ loss = (yp - y)2
 	•	在输入depth为3时：被filter size为2x2，但是贯串3个channels后，所圈中的12个输入节点连接到1个输出节点上。
 	•	在输入depth为时：2x2x个输入节点连接到1个输出节点上。
 	
-![Image](/Users/qiyun/MyResource/35.jpg)
+![Image](https://github.com/Qiyun2014/MyResource/blob/master/35.jpg)
 
 **注意**：三个channels的权重并不共享。 即当深度变为3后，权重也跟着扩增到了三组，如式子(3)所示，不同channels用的是自己的权重。 式子中增加的角标r,g,b分别表示red channel, green channel, blue channel的权重。
 
-![Image](/Users/qiyun/MyResource/36.png)
+![Image](https://github.com/Qiyun2014/MyResource/blob/master/36.png)
 
 计算例子：用表示red channel的编号为0的输入节点，表示green channel编号为5个输入节点。表示blue channel。如式子(4)所表达，这时的一个输出节点实际上是12个输入节点的线性组合。
 
-![Image](/Users/qiyun/MyResource/37.png)
+![Image](https://github.com/Qiyun2014/MyResource/blob/master/37.png)
 
 当filter扫到其他位置计算输出节点时，那12个权重在不同位置是共用的，如下面的动态图所展示。 透明黑框圈中的12个节点会连接到被白色边框选中的黄色节点上。
 
-![Image](/Users/qiyun/MyResource/38.gif)
+![Image](https://github.com/Qiyun2014/MyResource/blob/master/38.gif)
 
 ####Zero padding
 细心的读者应该早就注意到了，4x4的图片被2x2的filter卷积后变成了3x3的图片，每次卷积后都会小一圈的话，经过若干层后岂不是变的越来越小？ Zero padding就可以在这时帮助控制Feature Map的输出尺寸，同时避免了边缘信息被一步步舍弃的问题。
 例如：下面4x4的图片在边缘Zero padding一圈后，再用3x3的filter卷积后，得到的Feature Map尺寸依然是4x4不变
 
-![Padding](/Users/qiyun/MyResource/39.jpg)
+![Padding](https://github.com/Qiyun2014/MyResource/blob/master/39.jpg)
 
 通常大家都想要在卷积时保持图片的原始尺寸。 选择3x3的filter和1的zero padding，或5x5的filter和2的zero padding可以保持图片的原始尺寸。 这也是为什么大家多选择3x3和5x5的filter的原因。 另一个原因是3x3的filter考虑到了像素与其距离为1以内的所有其他像素的关系，而5x5则是考虑像素与其距离为2以内的所有其他像素的关系。
 
@@ -433,23 +433,23 @@ loss = (yp - y)2
 
 卷积的每个filter可以探测特定的形状。又由于Feature Map保持了抓取后的空间结构。若将探测到细小图形的Feature Map作为新的输入再次卷积后，则可以由此探测到“更大”的形状概念。 比如下图的第一个“大”形状可由2,3,4,5基础形状拼成。第二个可由2,4,5,6组成。第三个可由6,1组成。
 
-![Image](/Users/qiyun/MyResource/40.jpg)
+![Image](https://github.com/Qiyun2014/MyResource/blob/master/40.jpg)
 
 除了基础形状之外，颜色、对比度等概念对画面的识别结果也有影响。卷积层也会根据需要去探测特定的概念。
 
 可以从下面这张图中感受到不同数值的filters所卷积过后的Feature Map可以探测边缘，棱角，模糊，突出等概念。
 
-![Image](/Users/qiyun/MyResource/41.jpg)
+![Image](https://github.com/Qiyun2014/MyResource/blob/master/41.jpg)
 
 如我们先前所提，图片被识别成什么不仅仅取决于图片本身，还取决于图片是如何被观察的。
 而filter内的权重矩阵W是网络根据数据学习得到的，也就是说，我们让神经网络自己学习以什么样的方式去观察图片。
 
-![Image](/Users/qiyun/MyResource/42.jpg)
+![Image](https://github.com/Qiyun2014/MyResource/blob/master/42.jpg)
 
 拿老妇与少女的那幅图片举例，当标签是少女时，卷积网络就会学习抓取可以成少女的形状、概念。 当标签是老妇时，卷积网络就会学习抓取可以成老妇的形状、概念。
 下图展现了在人脸识别中经过层层的卷积后，所能够探测的形状、概念也变得越来越抽象和复杂。
 
-![Image](/Users/qiyun/MyResource/43.jpg)
+![Image](https://github.com/Qiyun2014/MyResource/blob/master/43.jpg)
 
 `卷积神经网络会尽可能寻找最能解释训练数据的抓取方式。`
 
